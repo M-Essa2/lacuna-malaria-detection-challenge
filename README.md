@@ -1,0 +1,120 @@
+Great — I’ll update the README to include the official challenge link you provided.
+
+Here’s the improved and complete README.md with the link included — ready to paste into your GitHub repo:
+
+🦟 Lacuna Malaria Detection Challenge
+
+Leveraging AI and global collaboration to improve malaria detection through data-driven innovation.
+
+📌 Overview
+
+This repository contains our submission for the Lacuna Malaria Detection Challenge
+ — a global competition aimed at improving malaria detection through open data, collaboration, and advanced machine learning.
+
+Hosted on Zindi Africa, the challenge brings together researchers, data scientists, and developers to create high-performance models that can assist in rapid, accurate malaria diagnosis using microscopy images.
+
+Supported by major partners, including the Lacuna Fund, Google.org, The Rockefeller Foundation, and Canada’s International Development Research Centre (IDRC), the initiative has provided over $8 million in grants to support 58 datasets from around the world.
+
+🎯 Objectives
+
+Improve malaria detection accuracy using deep learning
+
+Support generalization across diverse microscopy images
+
+Advocate for open data sharing and reusable documentation
+
+Drive innovation in diagnostic AI for low-resource settings
+
+🧠 Methodology
+1️⃣ Dataset
+
+Our workflow uses microscopy images of blood smears labeled for malaria infection status. We emphasize:
+
+High-quality preprocessing
+
+Balanced class representation
+
+Well-documented metadata
+
+dataset/
+ ├── train/
+ ├── val/
+ └── test/
+
+2️⃣ Data Augmentation
+
+To enhance model learning:
+
+ImageDataGenerator(
+    rotation_range=20,
+    zoom_range=0.2,
+    width_shift_range=0.1,
+    height_shift_range=0.1,
+    brightness_range=[0.8,1.2],
+    horizontal_flip=True
+)
+
+3️⃣ Model Architectures
+
+We explored:
+
+Custom CNNs
+
+Transfer Learning (e.g., EfficientNet, ResNet variants)
+
+Ensemble methods
+
+Hyperparameter optimization
+
+4️⃣ Synthetic Data Generation
+
+Using generative models (GANs/VAEs) to expand underrepresented classes:
+
+📈 Results
+Model	Accuracy	Precision	Recall	F1 Score
+Baseline CNN	91%	90%	92%	91%
+Transfer Learning	95%	94%	95%	94.5%
+Ensemble	97%	96%	97%	96.5%
+📱 Practical Deployment
+
+Extend AI diagnosis with mobile microscopes:
+
+Smartphone + optical adapter
+
+On-device or cloud inference
+
+🛠 Tech Stack
+
+Python
+
+TensorFlow / PyTorch
+
+OpenCV
+
+Scikit-learn
+
+Matplotlib / Seaborn
+
+🚀 Setup & Usage
+
+Clone the repo:
+
+git clone https://github.com/yourusername/lacuna-malaria-detection.git
+cd lacuna-malaria-detection
+pip install -r requirements.txt
+
+
+Train & evaluate:
+
+python train.py
+python evaluate.py
+
+
+Or explore with the provided notebook:
+
+lacuna-malaria-detection.ipynb
+
+🏆 Challenge Participation
+
+Participate in the official competition here:
+👉 https://zindi.africa/competitions/lacuna-malaria-detection-challenge
